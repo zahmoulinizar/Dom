@@ -3,7 +3,7 @@
     justify-content: space-between;
     flex-direction: column;
     width: 800px;
-    padding: 2px;
+    padding:2px;
     border: 2px #222 solid;
     margin:50px 20%;
     row-gap: 30px;
@@ -48,4 +48,11 @@
 }
 #final-total{
     display: none;
+    position: absolute;
+    margin: 310px 200px;
+    font-size: larger;
+    font-weight: 600;
+    text-transform: capitalize;
+    border: #222 2px double;
+    padding: 10px;
 }

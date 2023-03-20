@@ -14,10 +14,19 @@ for(let i=0;i<items.length;i++){
         <button class="moins"><i class="fa-solclass fa-minus"></i></button>
         <span class="totalItem"></span>
         <button class="delete">delete</button>
-        <h5><i class="fa-regular fa-heart"></i></h5>        
+        <h5 id="heart" onclick="licked()"><i class="fa-regular fa-heart" ></i></h5>        
     </div>` 
 }
-
+let love = document.querySelectorAll('#heart');
+    for (let i = 0; i < love.length; i++) {
+        love[i].onclick=function(){
+        licked()
+    }
+    function licked(){
+        love[i].style.color='red'
+        love[i].innerHTML=`<i class="fa-regular fa-heart"> 1 </i>`
+    }
+}
 // ------------- delete ----------------------
 
 let deleBtns = document.querySelectorAll(".delete");
@@ -51,8 +60,8 @@ for (let i = 0; i < plus.length; i++) {
         sum+=Total
         plusBtn.nextElementSibling.nextElementSibling.nextElementSibling.style.display='flex';
         plusBtn.nextElementSibling.nextElementSibling.nextElementSibling.innerHTML=`$ ${Total}`;
-        document.getElementById('final-total').style.display='flex'
-        document.getElementById('final-total').innerHTML=`$ ${sum}`;
+        document.getElementById('final-total').style.display='block'
+        document.getElementById('final-total').innerHTML=`Final total : $ ${sum}`;
     }
 }
 //-------------------- moins ------------------------
